@@ -1,18 +1,16 @@
-# Задача №18: Реализовать алгоритм перемешивания списка.
+#Напишите программу, которая будет преобразовывать десятичное число в двоичное.
 
-import random
+# def decimalToBinary(n):
+ 
+#     if(n > 1):
+        
+#      decimalToBinary(n//2)
+#     print(n%2, end =' ')
 
-def get_list (n, lft, rght):
-    return [random.randint(lft, rght) for i in range (n)]
-
-def shuffle_list (lst):
-    return random.shuffle (lst)
-
-n = 10
-lft =  -20
-rght = 50
-
-mylist = get_list(n, lft, rght)
-print (mylist)
-shuffle_list(mylist)
-print (mylist)
+# if __name__ == '__main__':
+#     decimalToBinary(8)
+#     print("\n")
+#     decimalToBinary(18)
+#     print("\n")
+#     decimalToBinary(7)
+#     print("\n")
