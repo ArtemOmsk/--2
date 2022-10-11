@@ -1,24 +1,23 @@
-#Задайте число. Составьте список чисел Фибоначчи, в том числе для отрицательных индексов.
-# def Fibonacci(n):
-#     if n in [1, 2]: 
-#         return  1
-#     else:
-#         return (n-1) + Fibonacci(n-2)
 
-# def NegaFibonacci(n):
-#     if 1 == 1: 
-#         return  1
-#     if 2 == 2: 
-#         return -1
-#     else:
-#         num1, num2 = 1, -1
-#         for i in range(2, n):
-#             num1, num2 = num2, num1 - num2
-#         return num2
+# Даны два файла, в каждом из которых находится запись многочлена.
+# Задача - сформировать файл, содержащий сумму многочленов.
 
-# list = [0]
-# userNumber = int(input('Enter any number: '))
-# for e in range(1, userNumber + 1):
-#     list.append(Fibonacci(e))
-#     list.insert(0, NegaFibonacci(e))
-# print(list)
+with open('poly_1.txt', 'w', encoding='utf-8') as file:
+    file.write('2*x^2 + 5*x^5')
+with open('poly_2.txt', 'w', encoding='utf-8') as file:
+    file.write('23*x^4 + 9*x^6')
+
+with open('poly_1.txt','r') as file:
+    poly_1 = file.readline()
+    list_of_poly_1 = poly_1.split()
+
+
+with open('poly_2.txt','r') as file:
+    poly_2 = file.readline()
+    list_of_poly_2 = poly_2.split()
+
+print(f'{list_of_poly_1} + {list_of_poly_2}')
+sum_poly = list_of_poly_1 + list_of_poly_2
+
+with open('sum_poly.txt', 'w', encoding='utf-8') as file:
+    file.write(f'{list_of_poly_1} + {list_of_poly_2}')
